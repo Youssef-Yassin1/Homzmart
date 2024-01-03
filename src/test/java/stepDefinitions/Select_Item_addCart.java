@@ -58,6 +58,7 @@ public class Select_Item_addCart {
         int p = Integer.parseInt(price);
         String totalPrice = Locators.totalPrice(driver).getText();
         String intValue = totalPrice.replaceAll("[^0-9]", "");
-        Assert.assertEquals(p,intValue);
+        int tp =Integer.parseInt(intValue);
+        Assert.assertEquals(p,tp);
     }
 }
